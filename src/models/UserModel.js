@@ -9,22 +9,22 @@ const UserSchema = new mongoose.Schema(
       trim: true,
       lowercase: true,
     },
-    userName:{
-        type:String,
-        required:true,
+    userName: {
+      type: String,
+      required: true,
     },
-    avatar:String,
-    isActive:{
-        type:Boolean,
-        default:true
-    },  
+    avatar: String,
+    isActive: {
+      type: Boolean,
+      default: true,
+    },
     password: {
       type: String,
       required: true,
-      select: false,
+      select :true,
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 export default mongoose.model("User", UserSchema);
